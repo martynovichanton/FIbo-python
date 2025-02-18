@@ -1,3 +1,4 @@
+import sys
 import time
 import multiprocessing
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, as_completed
@@ -8,7 +9,7 @@ def fibo(n):
 
 def main():
     start = time.perf_counter()
-    nums = 41
+    nums = int(sys.argv[1])
 
     arr = [0] * nums
 
